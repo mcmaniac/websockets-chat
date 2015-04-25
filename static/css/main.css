@@ -1,0 +1,75 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: sans-serif;
+}
+
+.error {
+  color: red;
+}
+.error:empty {
+  opacity: 0;
+}
+.error:not(:empty)::before {
+  content: "Error: ";
+}
+
+#login {
+  margin: 0 auto 0;
+}
+
+#login input {
+  margin-left: 1em;
+}
+
+#chat {
+  margin: 0 auto 0;
+  min-width: 60%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.1);
+  box-shadow: 0 0 1em rgba(0,0,0,0.1);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#chat .message-list {
+  overflow: auto;
+  list-style: none;
+  padding-left: 0;
+  flex: 1;
+}
+
+#chat .message-list .from {
+  min-width: 9.0em;
+  display: inline-block;
+  text-align: right;
+}
+#chat .message-list .from::before {
+  content: "<";
+}
+#chat .message-list .from::after {
+  content: ">";
+  width: 1.0em;
+  display: inline-block;
+  text-align: left;
+}
+
+#chat > div {
+  display: flex;
+}
+#chat > div input {
+  flex: 1;
+  margin: 0 0.5em 0 10em;
+  padding: 0 0.2em;
+  border: 1px solid rgba(0,0,0,0.2);
+  outline: none;
+}

@@ -1,0 +1,8 @@
+.git/
+.cabal-sandbox/
+cabal.sandbox.config
+dist/
+
+*.swp
+*.swo
+.hs_tags
